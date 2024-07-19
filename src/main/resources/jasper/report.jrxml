@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0c36aeae-779f-461b-bcc0-b486827e42ee">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="username" class="java.lang.String"/>
+    <parameter name="email" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="productName" class="java.lang.String"/>
+    <field name="quantity" class="java.lang.Integer"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="220" y="20" width="114" height="40" uuid="7e28b8fe-fed6-4477-a80f-0157ca0d1350"/>
+                <textElement>
+                    <font size="26"/>
+                </textElement>
+                <text><![CDATA[BinarFud]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="133" splitType="Stretch">
+            <staticText>
+                <reportElement x="30" y="10" width="100" height="30" uuid="2b33657a-2b2c-4609-8254-29b335cf59ff"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Username : ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="50" width="54" height="30" uuid="3d9f8305-8e07-4f8a-aeac-6cdf3b2b2284"/>
+                <textElement>
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Email : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement stretchType="RelativeToTallestObject" x="150" y="10" width="230" height="30" uuid="98002de2-1b6c-4d1c-8fef-4e4e88676dd3"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{username}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement stretchType="RelativeToTallestObject" x="150" y="50" width="230" height="30" uuid="02fee42f-a9ba-4da9-b876-8808bbaca544"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="149" splitType="Stretch">
+            <textField>
+                <reportElement x="30" y="20" width="160" height="30" uuid="a26aa091-540a-4209-92f3-21d7114159dd">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e58e0800-f460-44ef-8803-a1c1c3230f5c"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="1.0" lineStyle="Solid"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="190" y="20" width="60" height="30" uuid="41f1fe2b-5a65-49b7-bafa-eebbe7e1a1d1">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f8310433-3ce7-4631-af6d-ee933d014b23"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+</jasperReport>
